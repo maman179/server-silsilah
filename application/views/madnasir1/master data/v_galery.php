@@ -77,13 +77,11 @@
      							data-fresco-caption="<?= htmlspecialchars($caption); ?>">
 
      							<div class="gallery-image">
-
      								<img src="<?= base_url('assets/galery/' . $u->galery); ?>"
      									alt="<?= htmlspecialchars($caption); ?>"
      									loading="lazy">
 
      								<div class="gallery-overlay">
-
      									<div class="gallery-zoom">
      										<i class="fas fa-search-plus"></i>
      									</div>
