@@ -1,0 +1,65 @@
+Pass Bizhub : Didin@82
+username : 082310220339
+
+user_name : silsilah_admin
+Database :silsilah_silsilah
+passDb : Q&!.Gs@.0ccG
+
+CPanel Hyperclouds
+User Name	: silsilah	
+Pass CPanel	: 0f]Vy7rk5IMn 
+
+email : m42nssln@gmail.com
+Pass Akun Hyperclouds: pRHyzwbI1wqa
+
+Fonte Akun (082310220339)
+user name : 6282310220339
+password : SnLkKm
+
+Fonte Akun (085899402701)
+user name : 6285899402701
+password : BH1s4G
+
+support@silsilah-keluarga.my.id
+Pass Email Cpanel : k1wD^8e3NzX1
+
+email : keluargasilsilah9@gmail.com
+sandi aplikasi : eycutbzgljiaeryf
+
+hasanmaolani1@gmail.com
+pass Hasan Maolani : 09051987Ms!
+
+Sandi Aplikasi : dqmm cqof gixo qgle
+
+sandi aplikasi silsilah : mrakhaauliya@gmail.com -> bani ma'ruf
+sandi aplikasi silsilah	: m42nssln@gmail.com->bani madnasir
+
+
+Atlas Mongodb
+db	 : mrakhaauliya_db_user
+password : G5cLAeRd3Xh2sXmk
+
+mongodb+srv://mrakhaauliya_db_user:G5cLAeRd3Xh2sXmk@cluster0.garqogf.mongodb.net/
+
+
+Get API IG/FB
+NAME APP : APP-PORTFOLIO
+APP ID :1516069589643221  	
+Secret ID : d25f7128afce8c1590cc729bf8b86ce5
+Akses Token : EAAVi23VYb9UBP2ZBls17Pj7arMFx7pP6uWznMXuEvTfybxXOMGCxuSIwyjgVTwDkVIWgNKOVFrYxmyobt2upkgMcvaVpPCJmjSihlMmb26WXti5ZB5gQZAd4OH9Kb7iaAZAoQjq8ZAL84lFInfyopZAyfDUSElIosZBCuZAUZCC5AW7HawKCylNSVMJqgVIVnW7kt
+client id : 67ed3dcc32d3d3f98f6af4bf655f4b0d
+page id : 25997308783190120
+
+Get IG API
+APP-ID = 1604809077564372
+secret ID = a3efc0dba16001e247b4d4c7fa682649
+Akses Token : IGAAWzkLsAI9RBZAFJnaS1zUjU2LTQwTjBiZAzNKYWNneGRUR3dhbGpCOGs0bExwWnBGUTN0WHdqS1luZAlN2Y1FsZAk1pbEVDdVUtOTE3dms1a2FSV3lWWGgyU3JpUDRHM05malJSVGhQU21udy1vMG0tV1NIR29QUUpJdjlpZAlZACQQZDZD
+ID = 32112351531743843
+
+Get API IG/FB
+NAME : (APP-PORTFOLIO-2)
+APP-ID : 1089670263064832
+ID = 32112351531743843
+ACCESS TOKEN : EAAPfDKDzyQABP3PExeIucKozXAkhGQSkPlzBVyNDBL5lydlVSyumLZASRqPOuE0yhc2ireSSggQe6Eof77mXT3nNOyUZChSaYEvIVXeggP7zWdkn49cnvIYBEZBopxFumiQfgFhxblDKvnr2O08K4zQ9XIIwKLrsiKiVY8S7ET76urd0gmMllHro2o36ceYeEtSKNkkqv9vzNEt2ZCwKalAhecaa0QXxlGEZAnhQdztYYCVpJVQibhFaa2MbUIBQv6ZB7ViW2X4VoxPmYZCRRJotmMjWTY9343bhQky
+    
+

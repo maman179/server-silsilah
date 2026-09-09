@@ -1,0 +1,330 @@
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			font-family: 'Lato', sans-serif;
+
+			background:
+				linear-gradient(135deg,
+					#eef5ff 0%,
+					#f8fbff 45%,
+					#edf7f1 100%);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		/* Background decoration */
+
+		body::before {
+			content: "";
+			position: absolute;
+
+			width: 400px;
+			height: 400px;
+
+			background: rgba(13, 110, 253, 0.08);
+
+			border-radius: 50%;
+
+			top: -150px;
+			left: -150px;
+		}
+
+		body::after {
+			content: "";
+			position: absolute;
+
+			width: 350px;
+			height: 350px;
+
+			background: rgba(25, 135, 84, 0.08);
+
+			border-radius: 50%;
+
+			bottom: -150px;
+			right: -100px;
+		}
+
+		.login-wrapper {
+			width: 100%;
+			max-width: 430px;
+
+			padding: 20px;
+
+			position: relative;
+			z-index: 2;
+		}
+
+		.login-card {
+
+			background: rgba(255, 255, 255, 0.96);
+
+			border: 0;
+
+			border-radius: 24px;
+
+			box-shadow:
+				0 20px 50px rgba(0, 0, 0, 0.10);
+
+			overflow: hidden;
+		}
+
+		/* Header */
+
+		.login-header {
+
+			text-align: center;
+
+			padding: 35px 30px 20px;
+		}
+
+		.tree-icon {
+
+			width: 75px;
+			height: 75px;
+
+			margin: 0 auto 18px;
+
+			border-radius: 22px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			background: linear-gradient(135deg,
+					#0d6efd,
+					#198754);
+
+			color: white;
+
+			font-size: 34px;
+
+			box-shadow:
+				0 10px 25px rgba(13, 110, 253, 0.25);
+		}
+
+		.login-title {
+
+			margin: 0;
+
+			font-size: 25px;
+
+			font-weight: 700;
+
+			color: #212529;
+		}
+
+		.login-subtitle {
+
+			margin-top: 7px;
+
+			color: #6c757d;
+
+			font-size: 14px;
+		}
+
+		/* Form */
+
+		.login-body {
+
+			padding: 10px 35px 35px;
+		}
+
+		.form-label {
+
+			font-weight: 600;
+
+			font-size: 14px;
+
+			color: #495057;
+		}
+
+		.input-group {
+
+			margin-bottom: 20px;
+		}
+
+		.input-group-text {
+
+			background: #f8f9fa;
+
+			border: 1px solid #dee2e6;
+
+			border-right: 0;
+
+			color: #6c757d;
+
+			width: 48px;
+
+			justify-content: center;
+		}
+
+		.form-control {
+
+			height: 50px;
+
+			border-left: 0;
+
+			font-size: 15px;
+
+			box-shadow: none !important;
+		}
+
+		.form-control:focus {
+
+			border-color: #86b7fe;
+
+			background: white;
+		}
+
+		.password-input {
+
+			border-right: 0;
+		}
+
+		.show-password {
+
+			background: white;
+
+			border: 1px solid #dee2e6;
+
+			border-left: 0;
+
+			cursor: pointer;
+
+			color: #6c757d;
+
+			width: 50px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content: center;
+		}
+
+		.show-password:hover {
+
+			color: #0d6efd;
+		}
+
+		/* Login button */
+
+		.btn-login {
+
+			height: 52px;
+
+			border: 0;
+
+			border-radius: 12px;
+
+			background: linear-gradient(135deg,
+					#0d6efd,
+					#198754);
+
+			color: white;
+
+			font-size: 14px;
+
+			font-weight: 700;
+
+			letter-spacing: 2px;
+
+			transition: all 0.2s ease;
+
+			box-shadow:
+				0 8px 20px rgba(13, 110, 253, 0.20);
+		}
+
+		.btn-login:hover {
+
+			color: white;
+
+			transform: translateY(-2px);
+
+			box-shadow:
+				0 12px 25px rgba(13, 110, 253, 0.28);
+		}
+
+		.btn-login:active {
+
+			transform: translateY(0);
+		}
+
+		/* Bottom links */
+
+		.login-links {
+
+			margin-top: 22px;
+
+			display: flex;
+
+			justify-content: space-between;
+
+			font-size: 14px;
+		}
+
+		.login-links a {
+
+			text-decoration: none;
+
+			color: #0d6efd;
+
+			font-weight: 600;
+		}
+
+		.login-links a:hover {
+
+			text-decoration: underline;
+		}
+
+		/* Footer */
+
+		.login-footer {
+
+			text-align: center;
+
+			padding: 0 30px 25px;
+
+			color: #adb5bd;
+
+			font-size: 12px;
+		}
+
+		/* Mobile */
+
+		@media (max-width: 480px) {
+
+			.login-wrapper {
+
+				padding: 15px;
+			}
+
+			.login-header {
+
+				padding-top: 30px;
+			}
+
+			.login-body {
+
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+
+			.login-title {
+
+				font-size: 22px;
+			}
+
+			.login-links {
+
+				font-size: 13px;
+			}
+		}

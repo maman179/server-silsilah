@@ -1,0 +1,358 @@
+
+@page {
+    size: A3 landscape;
+    margin: 10mm;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: DejaVu Sans, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #222;
+}
+
+.judul {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.subjudul {
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   TREE UTAMA
+===================================================== */
+
+.tree {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+    width: 115px;
+    min-height: 82px;
+
+    padding: 6px;
+
+    border-radius: 9px;
+
+    color: white;
+
+    text-align: center;
+
+    margin: 0 auto;
+
+    page-break-inside: avoid;
+}
+
+.card img {
+    width: 34px;
+    height: 34px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    display: block;
+
+    margin: 0 auto 3px auto;
+}
+
+.no-photo {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    margin: 0 auto 3px auto;
+
+    line-height: 30px;
+
+    font-size: 13px;
+
+    background: rgba(255,255,255,.20);
+}
+
+.nama {
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.jenis {
+    font-size: 6px;
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   WARNA
+===================================================== */
+
+.ortu {
+    background: #6c757d;
+}
+
+.anak {
+    background: #0d8bf2;
+}
+
+.cucu {
+    background: #28a745;
+}
+
+.cicit {
+    background: #f0ad00;
+}
+
+.baok {
+    background: #dc3545;
+}
+
+
+/* =====================================================
+   GARIS VERTIKAL
+===================================================== */
+
+.vline {
+    width: 2px;
+    height: 14px;
+    background: #777;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   GARIS HORIZONTAL
+===================================================== */
+
+.hline {
+    height: 2px;
+    background: #777;
+}
+
+
+/* =====================================================
+   ORTU
+===================================================== */
+
+.ortu-area {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   LEVEL ANAK
+===================================================== */
+
+.anak-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+
+/*
+ * Masing-masing anak menjadi satu kolom.
+ * Ini penting supaya cucu mengikuti anaknya.
+ */
+
+.anak-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.anak-table td {
+    width: auto;
+    text-align: center;
+    vertical-align: top;
+    padding: 0 4px;
+}
+
+
+/* =====================================================
+   GARIS DARI ORTU KE ANAK
+===================================================== */
+
+.ortu-connector {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ortu-connector td {
+    padding: 0;
+    text-align: center;
+}
+
+.ortu-line {
+    height: 15px;
+    border-top: 2px solid #777;
+}
+
+.ortu-down {
+    width: 2px;
+    height: 14px;
+    background: #777;
+    margin: auto;
+}
+
+
+/* =====================================================
+   SETIAP CABANG ANAK
+===================================================== */
+
+.branch {
+    width: 100%;
+    text-align: center;
+
+    page-break-inside: avoid;
+}
+
+
+/* =====================================================
+   GARIS ANAK KE CUCU
+===================================================== */
+
+.child-line {
+    width: 2px;
+    height: 12px;
+    background: #777;
+    margin: auto;
+}
+
+
+/* =====================================================
+   CUCU DALAM CABANG ANAK
+===================================================== */
+
+.cucu-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.cucu-table td {
+    text-align: center;
+    vertical-align: top;
+    padding: 0 2px;
+}
+
+
+/* =====================================================
+   GARIS HORIZONTAL CUCU
+===================================================== */
+
+.cucu-connector {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cucu-connector td {
+    padding: 0;
+    height: 12px;
+}
+
+.cucu-top {
+    border-top: 2px solid #777;
+}
+
+.cucu-down {
+    width: 2px;
+    height: 12px;
+    background: #777;
+    margin: auto;
+}
+
+
+/* =====================================================
+   CICIT
+===================================================== */
+
+.cicit-area {
+    margin-top: 3px;
+}
+
+.cicit-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.cicit-table td {
+    text-align: center;
+    vertical-align: top;
+    padding: 0 2px;
+}
+
+
+/* =====================================================
+   BAOK
+===================================================== */
+
+.baok-area {
+    margin-top: 3px;
+}
+
+.baok-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.baok-table td {
+    text-align: center;
+    vertical-align: top;
+    padding: 0 2px;
+}
+
+
+/* =====================================================
+   SPACING
+===================================================== */
+
+.space-5 {
+    height: 5px;
+}
+
+.space-8 {
+    height: 8px;
+}
+
+.space-10 {
+    height: 10px;
+}
+
+.space-15 {
+    height: 15px;
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+.page-break {
+    page-break-before: always;
+}
+
