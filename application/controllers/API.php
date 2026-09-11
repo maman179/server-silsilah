@@ -889,6 +889,7 @@ class Api extends CI_Controller
 		$this->db->select('
         baok.*,
         cicit.nama_cicit AS nama_ortu_baok,
+        cicit.menantu_cicit AS menantu_cicit,
         cucu.nama_cucu AS nama_kakek_baok,
         anak.nama AS nama_buyut_baok
     ');
@@ -909,9 +910,7 @@ class Api extends CI_Controller
 			'left'
 		);
 
-
 		// CUCU → ANAK
-
 		$this->db->join(
 			'anak',
 			'anak.id_anak = cucu.id_anak',
@@ -943,7 +942,6 @@ class Api extends CI_Controller
 
 			]));
 	}
-
 
 	public function silsilah()
 	{
