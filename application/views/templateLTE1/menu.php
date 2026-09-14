@@ -72,23 +72,21 @@
 		<!-- WELCOME DASHBOARD -->
 		<div class="tab-empty">
 			<div class="dashboard-welcome">
-				<!-- BACKGROUND DECORATION -->
+
+				<!-- Background Decoration -->
 				<div class="welcome-circle circle-one"></div>
 				<div class="welcome-circle circle-two"></div>
 
-
-				<!-- MAIN CONTENT -->
 				<div class="welcome-container">
 
-					<!-- ICON -->
+					<!-- Icon -->
 					<div class="welcome-logo">
 						<div class="logo-circle">
 							<i class="fas fa-sitemap"></i>
 						</div>
 					</div>
 
-
-					<!-- TEXT -->
+					<!-- Welcome Text -->
 					<div class="welcome-small">
 						SELAMAT DATANG
 					</div>
@@ -111,28 +109,25 @@
 						dari generasi ke generasi.
 					</p>
 
-					<!-- FEATURE CARDS -->
+					<!-- Feature Cards -->
 					<div class="welcome-features">
 
-						<!-- DATA KELUARGA -->
+						<!-- Data Keluarga -->
 						<div class="feature-card">
-
 							<div class="feature-icon">
 								<i class="fas fa-users"></i>
 							</div>
 
 							<div>
 								<h5>Data Keluarga</h5>
-
 								<p>
 									Kelola data anggota keluarga
 									dengan mudah.
 								</p>
 							</div>
-
 						</div>
 
-						<!-- POHON SILSILAH -->
+						<!-- Pohon Silsilah -->
 						<div class="feature-card">
 							<div class="feature-icon">
 								<i class="fas fa-sitemap"></i>
@@ -140,16 +135,14 @@
 
 							<div>
 								<h5>Pohon Silsilah</h5>
-
 								<p>
 									Lihat hubungan keluarga
 									antar generasi.
 								</p>
 							</div>
-
 						</div>
 
-						<!-- LOKASI -->
+						<!-- Lokasi Keluarga -->
 						<div class="feature-card">
 							<div class="feature-icon">
 								<i class="fas fa-map-marker-alt"></i>
@@ -157,16 +150,17 @@
 
 							<div>
 								<h5>Lokasi Keluarga</h5>
-
 								<p>
 									Temukan lokasi rumah
 									anggota keluarga.
 								</p>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
+
 	</div>
 </div>

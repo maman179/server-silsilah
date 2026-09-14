@@ -48,6 +48,14 @@
 <script src="<?= base_url('assets/dist/js/galery.js'); ?>"></script>
 </table>
 
+<!-- /.content-wrapper -->
+<footer class="main-footer">
+	<strong>Copyright &copy; 2026 Silsilah Keluarga</strong>
+
+	<div class="float-right d-none d-sm-inline-block">
+		<b>All rights reserved.</b>
+	</div>
+</footer>
 </body>
 
 </html>

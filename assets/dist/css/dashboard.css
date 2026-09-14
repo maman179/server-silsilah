@@ -2,7 +2,7 @@
 
 	.dashboard-welcome {
 		position: relative;
-		min-height: calc(100vh - 110px);
+		min-height: calc(100vh - 100px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -13,7 +13,7 @@
 				#eef5ff 50%,
 				#ffffff 100%);
 
-		padding: 50px 20px;
+		padding: 30px;
 	}
 
 
