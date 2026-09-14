@@ -2347,9 +2347,7 @@ class Dashboard1 extends CI_Controller
 		);
 
 		$this->m_anak1->hapus_data($where, 'galery');
-
 		$this->session->set_flashdata('flash', 'Di Hapus');
-
 		redirect('dashboard1/tampil_galery');
 	}
 

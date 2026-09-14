@@ -1,82 +1,227 @@
-<!-- FORM LOGIN BIASA)-->
-<html>
+<!DOCTYPE html>
+<html lang="id">
+
 <head>
-	
 	<meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.bootstrap5.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Login - Portal Silsilah</title>
+
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Google Font -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url('assets/dist/css/login.css') ?>">
+
+	<!-- SweetAlert -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card border-0 shadow rounded-3 my-5">
-          <div class="card-body p-4 p-sm-5">
-           <h4 class="card-title text-center mb-5 fw-light fs-5"><b>Portal Silsilah</h4></b>
-            <form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
-              <div class="form-floating mb-3"> 
-                 <div class="flash-data-registrasi" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
-		              <?php if ($this->session->flashdata('flash')) : ?>
-			            <?php endif; ?>  
-                  <div class="flash-data-gagalreg" data-flashdata="<?= $this->session->flashdata('flash_gagal1'); ?>"></div>
-		              <?php if ($this->session->flashdata('flash_gagal1')) : ?>
-			            <?php endif; ?>  
-                  <div class="flash-data-gagallog" data-flashdata="<?= $this->session->flashdata('flash_gagal'); ?>"></div>
-		              <?php if ($this->session->flashdata('flash_gagal')) : ?>
-			            <?php endif; ?>  
 
-                <input type="text" class="form-control" id="floatingInput" name="username" value="<?= set_value('username');?>" placeholder="Masukan Email">
-                <label for="floatingInput">Email</label>          
-              </div>
-              
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-              </div>
+	<div class="login-wrapper">
+		<div class="login-card">
 
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" onclick="myFunction()" id="showpassword">
-                  <label>Tampilkan Password</label>
-              </div>
-              <div class="d-grid">
-                <button class="btn btn-outline-primary btn-login text-uppercase fw-bold" type="submit">L O G I N</button>
-              </div>
-            </form>
-            
-            <!-- <div class="d-grid">
-              <label class="text-center"> ---Atau---</a></label>
-              </div>             -->
-              <div class="row">
-              <!-- <br><label class="text-center"> Anda belum punya akun? Silakan klik</label></br> -->
-              <br><label class="text-center"><a style="text-decoration:none" href="<?php echo base_url('login/registrasi'); ?>">Buat Akun</a></br>
-            </div>
-            <div class="row">
-              <!-- <br><label class="text-center"> Anda belum punya akun? Silakan klik</label></br> -->
-              <br><label class="text-center"><a style="text-decoration:none" href="<?php echo base_url('login/tampilEmail'); ?>">Lupa Password</a></br>
-            </div>                   
-</div>
-</nav>
+			<!-- HEADER -->
+			<div class="login-header">
+				<div class="tree-icon">
+					<i class="fa fa-sitemap"></i>
+				</div>
+
+				<h1 class="login-title">
+					ADMIN SILSILAH
+				</h1>
+
+			</div>
+
+
+			<!-- FORM -->
+
+			<div class="login-body">
+
+				<!-- Flash Data -->
+
+				<div
+					class="flash-data-registrasi"
+					data-flashdata="<?= $this->session->flashdata('flash'); ?>">
+				</div>
+
+				<div
+					class="flash-data-gagalreg"
+					data-flashdata="<?= $this->session->flashdata('flash_gagal1'); ?>">
+				</div>
+
+				<div class="flash-data-gagallog"
+					data-flashdata="<?= $this->session->flashdata('flash_gagal'); ?>">
+				</div>
+
+				<form action="<?= base_url('login/aksi_login'); ?>" method="post">
+
+					<!-- EMAIL -->
+					<label class="form-label"> Email </label>
+
+					<div class="input-group">
+
+						<span class="input-group-text">
+							<i class="fa fa-envelope"></i>
+						</span>
+
+						<input
+							type="email"
+							class="form-control"
+							name="username"
+							value="<?= set_value('username'); ?>"
+							placeholder="Masukkan email"
+							autocomplete="username"
+							required>
+
+					</div>
+
+
+					<!-- PASSWORD -->
+
+					<label class="form-label">
+						Password
+					</label>
+
+					<div class="input-group">
+
+						<span class="input-group-text">
+							<i class="fa fa-lock"></i>
+						</span>
+
+						<input
+							type="password"
+							class="form-control password-input"
+							id="password"
+							name="password"
+							placeholder="Masukkan password"
+							autocomplete="current-password"
+							required>
+
+						<span
+							class="show-password"
+							onclick="togglePassword()"
+							title="Tampilkan password">
+							<i
+								class="fa fa-eye"
+								id="eyeIcon"></i>
+						</span>
+
+					</div>
+
+
+					<!-- LOGIN -->
+
+					<div class="d-grid">
+
+						<button
+							type="submit"
+							class="btn btn-login">
+
+							<!-- <i class="fa fa-sign-in"></i> -->
+
+							&nbsp; LOGIN
+
+						</button>
+
+					</div>
+
+				</form>
+
+
+				<!-- LINKS -->
+
+				<div class="login-links">
+
+					<a href="<?= base_url('login/registrasi'); ?>">
+
+						<i class="fa fa-user-plus"></i>
+						Buat Akun
+
+					</a>
+
+					<a href="<?= base_url('login/tampilEmail'); ?>">
+
+						Lupa Password
+						<i class="fa fa-angle-right"></i>
+
+					</a>
+
+				</div>
+
+			</div>
+
+
+			<!-- FOOTER -->
+
+			<div class="login-footer">
+				© <?= date('Y'); ?> — Semua hak dilindungi
+			</div>
+		</div>
+	</div>
+
+
+	<!-- JAVASCRIPT -->
+
+	<script>
+		function togglePassword() {
+			const password = document.getElementById('password');
+			const icon = document.getElementById('eyeIcon');
+
+			if (password.type === 'password') {
+				password.type = 'text';
+				icon.classList.remove('fa-eye');
+				icon.classList.add('fa-eye-slash');
+
+			} else {
+
+				password.type = 'password';
+				icon.classList.remove('fa-eye-slash');
+				icon.classList.add('fa-eye');
+			}
+		}
+	</script>
+
+	<!-- SweetAlert -->
+	<script>
+		<?php if ($this->session->flashdata('flash')) : ?>
+			Swal.fire({
+				icon: 'success',
+				title: 'Berhasil',
+				text: '<?= $this->session->flashdata('flash'); ?>',
+				confirmButtonText: 'OK',
+				confirmButtonColor: '#0d6efd'
+			});
+		<?php endif; ?>
+		<?php if ($this->session->flashdata('flash_gagal1')) : ?>
+			Swal.fire({
+				icon: 'error',
+				title: 'Gagal',
+				text: '<?= $this->session->flashdata('flash_gagal1'); ?>',
+				confirmButtonText: 'OK',
+				confirmButtonColor: '#dc3545'
+			});
+
+		<?php endif; ?>
+
+		<?php if ($this->session->flashdata('flash_gagal')) : ?>
+			Swal.fire({
+				icon: 'error',
+				title: 'Login Gagal',
+				text: '<?= $this->session->flashdata('flash_gagal'); ?>',
+				confirmButtonText: 'Coba Lagi',
+				confirmButtonColor: '#dc3545'
+			});
+
+		<?php endif; ?>
+	</script>
+
 </body>
-<script src="<?= base_url('assets/js/script.js');?>"></script>
-<script>function myFunction() {
-  var x = document.getElementById("password");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}</script>
+
 </html>

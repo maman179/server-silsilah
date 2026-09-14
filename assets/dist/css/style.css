@@ -1,76 +1,46 @@
-/* =========================================================
-   FAMILY TREE / POHON SILSILAH
-   ========================================================= */
+   /* FAMILY TREE / POHON SILSILAH */
 
 /* Container utama */
 .tree-container {
     width: 100%;
     overflow-x: auto;
     overflow-y: auto;
-
     background: #f5f6fa;
-
     padding: 40px 20px 100px;
-
     box-sizing: border-box;
-
     min-height: 600px;
 }
 
-
-/* =========================================================
-   FAMILY TREE
-   ========================================================= */
-
+   /* FAMILY TREE */
 .family-tree {
     position: relative;
-
     width: max-content;
     min-width: 100%;
-
     padding: 60px 40px 100px;
-
     box-sizing: border-box;
-
     text-align: center;
 }
 
-
-/* =========================================================
-   NODE
-   ========================================================= */
+   /* NODE */
 
 .family-tree .node {
     position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   KARTU / BOX
-   ========================================================= */
-
+   /* KARTU / BOX */
 .family-tree .box {
     position: relative;
-
     width: 265px;
     min-height: 114px;
-
     padding: 22px 18px;
-
     box-sizing: border-box;
-
     border-radius: 14px;
-
     text-align: center;
-
     z-index: 10;
-
     box-shadow:
         0 5px 12px rgba(0, 0, 0, 0.16);
 
@@ -79,310 +49,169 @@
         box-shadow 0.2s ease;
 }
 
-
 /* Hover */
 .family-tree .box:hover {
     transform: translateY(-3px);
-
     box-shadow:
         0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
-
-/* =========================================================
-   NAMA
-   ========================================================= */
+   /* NAMA */
 
 .family-tree .nama {
     font-size: 18px;
-
     font-weight: 700;
-
     line-height: 1.4;
-
     word-break: break-word;
 }
 
-
-/* =========================================================
-   KETERANGAN GENERASI
-   ========================================================= */
-
+   /* KETERANGAN GENERASI */
 .family-tree .generasi {
     margin-top: 10px;
-
     font-size: 13px;
-
     font-weight: 500;
-
     letter-spacing: 0.3px;
-
     opacity: 0.85;
 }
 
-
-/* =========================================================
-   WARNA ORANG TUA
-   ========================================================= */
-
+   /* WARNA ORANG TUA */
 .family-tree .ortu-box {
     background: #343a40;
-
     color: #ffffff;
 }
 
-
-/* =========================================================
-   WARNA ANAK
-   ========================================================= */
-
+   /* WARNA ANAK */
 .family-tree .anak-box {
     background: #087ff5;
-
     color: #ffffff;
 }
 
-
-/* =========================================================
-   WARNA CUCU
-   ========================================================= */
-
+   /* WARNA CUCU */
 .family-tree .cucu-box {
     background: #28a745;
-
     color: #ffffff;
 }
 
-
-/* =========================================================
-   WARNA CICIT
-   ========================================================= */
-
+   /* WARNA CICIT */
 .family-tree .cicit-box {
     background: #ffc107;
-
     color: #222222;
 }
 
-
-/* =========================================================
-   WARNA BAOK
-   ========================================================= */
-
+   /* WARNA BAOK */
 .family-tree .baok-box {
     background: #dc3545;
-
     color: #ffffff;
 }
 
-
-/* =========================================================
-   ROOT / ORANG TUA
-   ========================================================= */
-
+   /* ROOT / ORANG TUA */
 .family-tree > .root {
     display: flex;
-
     justify-content: center;
-
     width: 100%;
 }
 
-
-/* =========================================================
-   ROOT YANG MEMILIKI ANAK
-   ========================================================= */
-
+   /* ROOT YANG MEMILIKI ANAK */
 .family-tree .node.has-children {
     position: relative;
 }
 
-
-/* =========================================================
-   GARIS VERTIKAL DARI ORANG TUA
-   KE GARIS HORIZONTAL ANAK
-   ========================================================= */
-
+   /* GARIS VERTIKAL DARI ORANG TUA */
+   /* KE GARIS HORIZONTAL ANAK */
 .family-tree .node.has-children > .children::after {
-
     content: "";
-
     position: absolute;
-
     top: -60px;
-
     left: 50%;
-
     width: 2px;
-
     height: 30px;
-
     background: #999999;
-
     transform: translateX(-50%);
-
     z-index: 1;
 }
 
-
-/* =========================================================
-   CHILDREN
-   ========================================================= */
-
+   /* CHILDREN */
 .family-tree .children {
-
     position: relative;
-
     display: flex;
-
     justify-content: center;
-
     align-items: flex-start;
-
     width: max-content;
-
     margin-top: 60px;
-
     padding: 0;
-
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   JARAK ANTAR NODE
-   ========================================================= */
-
+   /* JARAK ANTAR NODE */
 .family-tree .children > .node {
-
     margin-left: 25px;
-
     margin-right: 25px;
 }
 
-
-/* =========================================================
-   GARIS VERTIKAL MENUJU SETIAP ANAK
-   ========================================================= */
-
+   /* GARIS VERTIKAL MENUJU SETIAP ANAK */
 .family-tree .children > .node::before {
-
     content: "";
-
     position: absolute;
-
     top: -30px;
-
     left: 50%;
-
     width: 2px;
-
     height: 30px;
-
     background: #999999;
-
     transform: translateX(-50%);
-
     z-index: 1;
 }
 
-
-/* =========================================================
-   GARIS HORIZONTAL
-
-   Dibuat oleh JavaScript:
-   .family-line
-
-   Garis akan otomatis dimulai dari tengah
-   anak pertama dan berakhir di tengah
-   anak terakhir.
-   ========================================================= */
-
+   /* GARIS HORIZONTAL */
 .family-tree .family-line {
-
     position: absolute;
-
     top: -30px;
-
     height: 2px;
-
     background: #999999;
-
     z-index: 0;
-
     pointer-events: none;
 }
 
-
-/* =========================================================
-   NODE GENERASI BERIKUTNYA
-   ========================================================= */
-
+   /* NODE GENERASI BERIKUTNYA */
 .family-tree .children .children {
-
     margin-top: 60px;
 }
 
-
-/* =========================================================
-   GARIS VERTIKAL DARI ANAK KE CUCU
-   ========================================================= */
-
+   /* GARIS VERTIKAL DARI ANAK KE CUCU */
 .family-tree
 .children
 .node.has-children
 > .children::after {
 
     content: "";
-
     position: absolute;
-
     top: -60px;
-
     left: 50%;
-
     width: 2px;
-
     height: 30px;
-
     background: #999999;
-
     transform: translateX(-50%);
-
     z-index: 1;
 }
 
-
-/* =========================================================
-   LEVEL CUCU
-   ========================================================= */
+   /* LEVEL CUCU */
 
 .family-tree .cucu-box {
     position: relative;
 }
 
-
-/* =========================================================
-   LEVEL CICIT
-   ========================================================= */
+   /* LEVEL CICIT */
 
 .family-tree .cicit-box {
     position: relative;
 }
 
-
-/* =========================================================
-   LEVEL BAOK
-   ========================================================= */
+   /* LEVEL BAOK */
 
 .family-tree .baok-box {
     position: relative;
 }
 
-
-/* =========================================================
-   SCROLLBAR HORIZONTAL
-   ========================================================= */
+   /* SCROLLBAR HORIZONTAL */
 
 .tree-container::-webkit-scrollbar {
     height: 12px;
@@ -390,13 +219,11 @@
 
 .tree-container::-webkit-scrollbar-track {
     background: #e9ecef;
-
     border-radius: 10px;
 }
 
 .tree-container::-webkit-scrollbar-thumb {
     background: #999999;
-
     border-radius: 10px;
 }
 
@@ -405,21 +232,14 @@
 }
 
 
-/* =========================================================
-   SCROLLBAR VERTICAL
-   ========================================================= */
+   /* SCROLLBAR VERTICAL */
 
 .tree-container::-webkit-scrollbar:vertical {
     width: 10px;
 }
 
-
-/* =========================================================
-   RESPONSIVE
-   ========================================================= */
-
+   /* RESPONSIVE */
 @media (max-width: 768px) {
-
     .tree-container {
         padding: 30px 10px 80px;
     }
@@ -430,9 +250,7 @@
 
     .family-tree .box {
         width: 210px;
-
         min-height: 95px;
-
         padding: 17px 12px;
     }
 
@@ -446,22 +264,15 @@
 
     .family-tree .children > .node {
         margin-left: 15px;
-
         margin-right: 15px;
     }
-
 }
 
-
-/* =========================================================
-   MOBILE KECIL
-   ========================================================= */
+   /* MOBILE KECIL */
 
 @media (max-width: 480px) {
-
     .family-tree .box {
         width: 190px;
-
         min-height: 90px;
     }
 
@@ -475,7 +286,6 @@
 
     .family-tree .children > .node {
         margin-left: 10px;
-
         margin-right: 10px;
     }
 
@@ -498,7 +308,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.65);
-
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -541,4 +350,3 @@
 }
 
 }
-
