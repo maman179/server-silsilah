@@ -2211,8 +2211,7 @@ class Dashboard1 extends CI_Controller
 		redirect('dashboard1/tampil_data_cicit');
 	}
 
-
-
+	//Menampilkan form input galery tambah foto
 	function galery()
 	{
 		$username = $this->session->nama;
@@ -2229,9 +2228,43 @@ class Dashboard1 extends CI_Controller
 		$caption = $this->input->post('caption');
 		$galery = $_FILES['galery'];
 
+		// CEK FOTO DUPLIKAT
+		if (!empty($galery['tmp_name']) && $galery['error'] == 0) {
+			$hash_foto = md5_file($galery['tmp_name']);
+
+			// Ambil semua foto milik ortu
+			$data_galery = $this->db
+				->where('id_ortu', $id_ortu)
+				->get('galery')
+				->result();
+
+			foreach ($data_galery as $foto) {
+
+				$file_lama = FCPATH . 'assets/galery/' . $foto->galery;
+
+				if (file_exists($file_lama)) {
+					$hash_foto_lama = md5_file($file_lama);
+
+					// Jika isi foto sama
+					if ($hash_foto == $hash_foto_lama) {
+						$this->session->set_flashdata(
+							'flash_gagal',
+							'Foto sudah ada, tidak boleh upload foto yang sama.'
+						);
+
+						redirect('dashboard1/galery');
+						return;
+					}
+				}
+			}
+		}
+		// =========================================================
+		// SELESAI CEK FOTO DUPLIKAT
+		// =========================================================
+
 		if ($galery == '') {
 		} else {
-			$config['upload_path']	= './assets/galery';
+			$config['upload_path']  = './assets/galery';
 			$config['allowed_types'] = 'jpg|png|gif';
 			$config['encrypt_name'] = true;
 
@@ -2249,14 +2282,20 @@ class Dashboard1 extends CI_Controller
 				$config['maintain_ratio'] = FALSE;
 				$config['width'] = 500;
 				$config['height'] = 500;
-				$config['new_image']	= './assets/galery' . $galery;
+				$config['new_image'] = './assets/galery' . $galery;
+
 				$this->load->library('image_lib', $config);
 				$this->image_lib->resize();
 
 				$galery = $this->upload->data('file_name');
 			}
 		}
-		$data = array('id_ortu' => $id_ortu, 'caption' => $caption, 'galery' => $galery);
+
+		$data = array(
+			'id_ortu' => $id_ortu,
+			'caption' => $caption,
+			'galery' => $galery
+		);
 
 		$this->m_anak1->form_simpan_galery($data, 'galery');
 
@@ -2267,6 +2306,7 @@ class Dashboard1 extends CI_Controller
 	function tampil_galery()
 	{
 		$username = $this->session->nama;
+
 		$data['galery'] = $this->db->query("SELECT galery.*, ortu.username 
 		from galery 
 		INNER JOIN ortu ON ortu.id_ortu=galery.id_ortu 
@@ -2275,6 +2315,42 @@ class Dashboard1 extends CI_Controller
 		$this->load->view('templateLTE1/header');
 		$this->load->view('madnasir1/master data/v_galery', $data);
 		$this->load->view('templateLTE1/footer');
+	}
+
+	// PROSES HAPUS DATA
+	function hapus_galery($id_galery)
+	{
+		// Ambil data galeri terlebih dahulu
+		$galery = $this->db
+			->where('id_galery', $id_galery)
+			->get('galery')
+			->row();
+
+		// Pastikan data ditemukan
+		if (!$galery) {
+			$this->session->set_flashdata('error', 'Data galeri tidak ditemukan');
+			redirect('dashboard1/tampil_galery');
+			return;
+		}
+
+		// Lokasi file foto
+		$file = FCPATH . 'assets/galery/' . $galery->galery;
+
+		// Hapus file foto
+		if (!empty($galery->galery) && file_exists($file)) {
+			unlink($file);
+		}
+
+		// Hapus data dari database
+		$where = array(
+			'id_galery' => $id_galery
+		);
+
+		$this->m_anak1->hapus_data($where, 'galery');
+
+		$this->session->set_flashdata('flash', 'Di Hapus');
+
+		redirect('dashboard1/tampil_galery');
 	}
 
 	function view_profile_cicit($id)

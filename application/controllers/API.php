@@ -277,8 +277,7 @@ class Api extends CI_Controller
 				]));
 		}
 
-		return $this->output
-			->set_status_header(200)
+		return $this->output->set_status_header(200)
 			->set_output(json_encode([
 				'status'  => true,
 				'message' => 'Login berhasil',
@@ -424,31 +423,19 @@ class Api extends CI_Controller
 		}
 
 
-		// ==========================================
 		// AMBIL DATA CICIT
-		// ==========================================
-
 		$cicit = [];
-
 		if (!empty($id_cucu)) {
-
 			$cicit = $this->db
 				->where_in('id_cucu', $id_cucu)
 				->get('cicit')
 				->result();
 		}
 
-
 		$id_cicit = [];
-
 		foreach ($cicit as $row) {
-
 			$id_cicit[] = $row->id_cicit;
-
-
-			// ======================================
 			// LOKASI CICIT
-			// ======================================
 
 			if (
 				$row->latitude !== NULL &&
