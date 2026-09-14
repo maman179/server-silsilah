@@ -1,4 +1,4 @@
-   /* FAMILY TREE / POHON SILSILAH */
+/* FAMILY TREE / POHON SILSILAH */
 
 /* Container utama */
 .tree-container {
@@ -11,7 +11,7 @@
     min-height: 600px;
 }
 
-   /* FAMILY TREE */
+/* FAMILY TREE */
 .family-tree {
     position: relative;
     width: max-content;
@@ -21,8 +21,7 @@
     text-align: center;
 }
 
-   /* NODE */
-
+/* NODE */
 .family-tree .node {
     position: relative;
     display: flex;
@@ -31,12 +30,16 @@
     box-sizing: border-box;
 }
 
-   /* KARTU / BOX */
+/* KARTU / BOX */
 .family-tree .box {
     position: relative;
-    width: 265px;
-    min-height: 114px;
-    padding: 22px 18px;
+
+    /* UKURAN BOX DIUBAH */
+    width: 220px;
+    min-height: 95px;
+
+    padding: 16px 14px;
+
     box-sizing: border-box;
     border-radius: 14px;
     text-align: center;
@@ -56,68 +59,73 @@
         0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
-   /* NAMA */
-
+/* NAMA */
 .family-tree .nama {
-    font-size: 18px;
+
+    /* HURUF DIUBAH */
+    font-size: 16px;
+
     font-weight: 700;
     line-height: 1.4;
     word-break: break-word;
 }
 
-   /* KETERANGAN GENERASI */
+/* KETERANGAN GENERASI */
 .family-tree .generasi {
-    margin-top: 10px;
-    font-size: 13px;
+    margin-top: 8px;
+
+    /* HURUF DIUBAH */
+    font-size: 12px;
+
     font-weight: 500;
     letter-spacing: 0.3px;
     opacity: 0.85;
 }
 
-   /* WARNA ORANG TUA */
+/* WARNA ORANG TUA */
 .family-tree .ortu-box {
     background: #343a40;
     color: #ffffff;
 }
 
-   /* WARNA ANAK */
+/* WARNA ANAK */
 .family-tree .anak-box {
     background: #087ff5;
     color: #ffffff;
 }
 
-   /* WARNA CUCU */
+/* WARNA CUCU */
 .family-tree .cucu-box {
     background: #28a745;
     color: #ffffff;
 }
 
-   /* WARNA CICIT */
+/* WARNA CICIT */
 .family-tree .cicit-box {
     background: #ffc107;
     color: #222222;
 }
 
-   /* WARNA BAOK */
+/* WARNA BAOK */
 .family-tree .baok-box {
     background: #dc3545;
     color: #ffffff;
 }
 
-   /* ROOT / ORANG TUA */
+/* ROOT / ORANG TUA */
 .family-tree > .root {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-   /* ROOT YANG MEMILIKI ANAK */
+/* ROOT YANG MEMILIKI ANAK */
 .family-tree .node.has-children {
     position: relative;
 }
 
-   /* GARIS VERTIKAL DARI ORANG TUA */
-   /* KE GARIS HORIZONTAL ANAK */
+/* GARIS VERTIKAL DARI ORANG TUA */
+/* KE GARIS HORIZONTAL ANAK */
 .family-tree .node.has-children > .children::after {
     content: "";
     position: absolute;
@@ -130,7 +138,7 @@
     z-index: 1;
 }
 
-   /* CHILDREN */
+/* CHILDREN */
 .family-tree .children {
     position: relative;
     display: flex;
@@ -142,13 +150,13 @@
     box-sizing: border-box;
 }
 
-   /* JARAK ANTAR NODE */
+/* JARAK ANTAR NODE */
 .family-tree .children > .node {
     margin-left: 25px;
     margin-right: 25px;
 }
 
-   /* GARIS VERTIKAL MENUJU SETIAP ANAK */
+/* GARIS VERTIKAL MENUJU SETIAP ANAK */
 .family-tree .children > .node::before {
     content: "";
     position: absolute;
@@ -161,7 +169,7 @@
     z-index: 1;
 }
 
-   /* GARIS HORIZONTAL */
+/* GARIS HORIZONTAL */
 .family-tree .family-line {
     position: absolute;
     top: -30px;
@@ -171,12 +179,12 @@
     pointer-events: none;
 }
 
-   /* NODE GENERASI BERIKUTNYA */
+/* NODE GENERASI BERIKUTNYA */
 .family-tree .children .children {
     margin-top: 60px;
 }
 
-   /* GARIS VERTIKAL DARI ANAK KE CUCU */
+/* GARIS VERTIKAL DARI ANAK KE CUCU */
 .family-tree
 .children
 .node.has-children
@@ -193,26 +201,22 @@
     z-index: 1;
 }
 
-   /* LEVEL CUCU */
-
+/* LEVEL CUCU */
 .family-tree .cucu-box {
     position: relative;
 }
 
-   /* LEVEL CICIT */
-
+/* LEVEL CICIT */
 .family-tree .cicit-box {
     position: relative;
 }
 
-   /* LEVEL BAOK */
-
+/* LEVEL BAOK */
 .family-tree .baok-box {
     position: relative;
 }
 
-   /* SCROLLBAR HORIZONTAL */
-
+/* SCROLLBAR HORIZONTAL */
 .tree-container::-webkit-scrollbar {
     height: 12px;
 }
@@ -231,14 +235,12 @@
     background: #777777;
 }
 
-
-   /* SCROLLBAR VERTICAL */
-
+/* SCROLLBAR VERTICAL */
 .tree-container::-webkit-scrollbar:vertical {
     width: 10px;
 }
 
-   /* RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .tree-container {
         padding: 30px 10px 80px;
@@ -268,8 +270,7 @@
     }
 }
 
-   /* MOBILE KECIL */
-
+/* MOBILE KECIL */
 @media (max-width: 480px) {
     .family-tree .box {
         width: 190px;
@@ -289,7 +290,7 @@
         margin-right: 10px;
     }
 
-	.alamat-detail {
+    .alamat-detail {
         line-height: 1.6;
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -299,54 +300,53 @@
         margin-bottom: 10px;
     }
 
-#loadingOverlay {
-    display: none;
-    position: fixed;
-    z-index: 99999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.65);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.loading-box {
-    background: white;
-    padding: 25px 35px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,.3);
-}
-
-.loading-spinner {
-    width: 45px;
-    height: 45px;
-    border: 5px solid #ddd;
-    border-top: 5px solid #28a745;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto 15px;
-}
-
-.loading-text {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.loading-subtext {
-    font-size: 13px;
-    color: #777;
-    margin-top: 5px;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
+    #loadingOverlay {
+        display: none;
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.65);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
-}
 
+    .loading-box {
+        background: white;
+        padding: 25px 35px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    }
+
+    .loading-spinner {
+        width: 45px;
+        height: 45px;
+        border: 5px solid #ddd;
+        border-top: 5px solid #28a745;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto 15px;
+    }
+
+    .loading-text {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .loading-subtext {
+        font-size: 13px;
+        color: #777;
+        margin-top: 5px;
+    }
+
+    @keyframes spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }

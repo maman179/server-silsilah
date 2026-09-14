@@ -86,11 +86,19 @@
 
 								<!-- CAPTION -->
 								<div class="gallery-info">
-									<div class="gallery-caption"
+									<div class="gallery-caption text-center"
 										title="<?= htmlspecialchars($caption); ?>">
 										<?= htmlspecialchars($caption); ?>
 									</div>
-									<a href="<?= site_url('dashboard1/hapus_galery/' . $u->id_galery) ?>" class="btn btn-outline-danger btn-sm tombol-hapus"><i class="fa fa-trash"></i> Hapus </a>
+									<hr>
+
+									<a href="<?= site_url('dashboard1/hapus_galery/' . $u->id_galery) ?>"
+										class="btn btn-outline-danger btn-sm tombol-hapus" title="Hapus Foto">
+										<i class="fa fa-trash"></i></a>
+
+									<a href="<?= site_url('dashboard1/download_galery/' . $u->id_galery) ?>"
+										class="btn btn-outline-primary btn-sm download-galery" title="Download Foto">
+										<i class="fas fa-download"></i></a>
 								</div>
 							</div>
 						</div>

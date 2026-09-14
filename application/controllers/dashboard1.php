@@ -2351,6 +2351,29 @@ class Dashboard1 extends CI_Controller
 		redirect('dashboard1/tampil_galery');
 	}
 
+	public function download_galery($id_galery)
+	{
+		$galery = $this->db->where('id_galery', $id_galery)->get('galery')->row();
+
+		if (!$galery) {
+			show_404();
+			return;
+		}
+
+		$file_path = FCPATH . 'assets/galery/' . $galery->galery;
+
+		if (!file_exists($file_path)) {
+			show_404();
+			return;
+		}
+
+		$extension = pathinfo($galery->galery, PATHINFO_EXTENSION);
+		$caption = !empty($galery->caption) ? url_title($galery->caption, '_', true)			: 'foto_kegiatan';
+		$file_name = $caption . '.' . $extension;
+		$this->load->helper('download');
+		force_download($file_name, file_get_contents($file_path));
+	}
+
 	function view_profile_cicit($id)
 	{
 		$data['profile_cicit'] = $this->db->query("select cicit.*, cucu.nama_cucu, cucu.menantu_cucu

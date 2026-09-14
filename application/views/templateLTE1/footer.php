@@ -1,4 +1,3 @@
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -9,13 +8,12 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
-<script type="text/javascript" src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script type="text/javascript" src='https://kit.fontawesome.com/a076d05399.js'></script>
 <script type="text/javascript" src="<?= base_url('assets/js/script.js'); ?>"></script>
 <script type="text/javascript" src="<?= base_url('assets/js/uppercase.js'); ?>"></script>
 
 <!--menampilkan data ke tabel dengan plugin datatables!-->
+<script type="text/javascript" href="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
 <script>
 	$('#anak').DataTable();
 	$('#cucu').DataTable();
@@ -25,7 +23,6 @@
 	$('#ortu').DataTable();
 </script>
 
-<script type="text/javascript" href="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
 
 <!-- Bootstrap -->
 <script src="<?php echo base_url('assets/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
