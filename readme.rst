@@ -1,3 +1,18 @@
+***************
+Instalation DOM PDF and Composser
+***************
+* install composer
+1. kunjungi https://getcomposer.org/Composer-Setup.exe
+2. lalu install Composer-Setup.exe
+3. Installer biasanya meminta lokasi php.exe. C:\xampp\php\php.exe
+4. cek apakah sudah terinstall git bash composer -V
+
+*Install DomPDF
+1. open your file C:\xampp\htdocs\silsilah-server
+2. git bash composer require dompdf/dompdf
+3. open application/config/config.php
+4. $config['composer_autoload'] = TRUE; atau $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+
 ###################
 What is CodeIgniter
 ###################
@@ -63,9 +78,6 @@ Resources
 Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
 or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
 
-***************
-Acknowledgement
-***************
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
