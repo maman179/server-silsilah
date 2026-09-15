@@ -7,7 +7,7 @@ Instalation DOM PDF and Composser
 3. Installer biasanya meminta lokasi php.exe. C:\xampp\php\php.exe
 4. cek apakah sudah terinstall git bash composer -V
 
-*Install DomPDF
+Install DomPDF
 1. open your file C:\xampp\htdocs\silsilah-server
 2. git bash composer require dompdf/dompdf
 3. open application/config/config.php
