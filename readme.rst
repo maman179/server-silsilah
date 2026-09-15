@@ -10,10 +10,10 @@ Instalation DOM PDF
 ***************
 Instalation DOM PDF 
 ***************
-1. cd C:\xampp\htdocs\silsilah
+1. open your file silslah-server
 2. bash composer require dompdf/dompdf
 3. application/config/config.php
-4. $config['composer_autoload'] = TRUE; atau $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
+4. find $config['composer_autoload'] = TRUE; atau $config['composer_autoload'] = FCPATH . 'vendor/autoload.php';
 
 
 ###################
